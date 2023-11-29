@@ -75,8 +75,8 @@ namespace RolesAndUserMigrationGenerator
             var user = new
             {
                 Id = Guid.NewGuid().ToString(),
-                Name = txtUserName.Text.Trim() + "@" + txtDomain.Text,
-                Email = txtUserName.Text.Trim() + "@" + txtDomain.Text,
+                Name = txtUserName.Text + "@" + txtDomain.Text,
+                Email = txtUserName.Text + "@" + txtDomain.Text,
                 PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, this.txtPassword.Text),
                 SecurityStamp = Guid.NewGuid().ToString("D")
             };
